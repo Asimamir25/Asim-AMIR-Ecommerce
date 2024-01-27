@@ -37,8 +37,10 @@ const Navbar: React.FC = () => {
               <div className="icon-svg">
                 <img src={heart} alt="heart" />
               </div>
-              <div className="counter w-[14.21px] h-[15px] bg-[#EDA415] rounded-[394px] items-center justify-center text-center  xx:w-[24px] ">
-                <div className="text-white text-[9px] font-normal text-center">1</div>
+              <div className="counter w-[14.21px] h-[15px] bg-[#EDA415] rounded-full flex justify-center items-center xx:w-[24px] ">
+                <div className="text-white text-[9px] font-normal flex justify-center items-center text-center">
+                  1
+                </div>
               </div>
             </div>
 
@@ -50,8 +52,10 @@ const Navbar: React.FC = () => {
                 <div className="icon-svg">
                   <img src={basket} alt="" />
                 </div>
-                <div className="counter w-[14px] h-[15px] bg-[#EDA415] rounded-lg items-center justify-center text-center  xx:w-[24px] ">
-                  <p className="text-white text-[9px]">1</p>
+                <div className="counter w-[14.21px] h-[15px] bg-[#EDA415] rounded-full flex justify-center items-center xx:w-[24px] ">
+                  <div className="text-white text-[9px] font-normal flex justify-center items-center text-center">
+                    1
+                  </div>
                 </div>
               </div>
 

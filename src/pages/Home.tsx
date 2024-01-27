@@ -33,141 +33,8 @@ const Home: React.FC = () => {
   return (
     <>
       <AddCard />
-      {/* <div className="crouse px-[108px] py-6 flex relative justify-between  xx:px-[10px] gap-2 overflow-auto">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          navigation
-          loop={true}
-          breakpoints={{
-            576: {
-              slidesPerView: 1,
-            },
 
-            768: {
-              slidesPerView: 2,
-            },
-
-            992: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            {" "}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div> */}
-      <div className="crouse px-[108px] py-6 flex relative justify-between xx:px-[10px] gap-2 overflow-auto">
+      <div className="crouse px-[108px] py-6 flex relative justify-between xx:px-[10px] gap-2 md:gap-3 ">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={20}
@@ -189,21 +56,6 @@ const Home: React.FC = () => {
           }}
         >
           <SwiperSlide>
-            {/* Slide content */}
-            <div className="item1 min-h-[147px] min-w-[341px] px-[43px] border border-bordercol rounded-[20px] flex items-center xx:h-auto">
-              <img src={speaker} alt="" className="w-[154px]" />
-              <div className="cro-text">
-                <p className="text-primarytext font-poppins text-[21px] font-semibold">
-                  Speaker
-                </p>
-                <p className="text-primarytext font-poppins text-lg font-meadium">
-                  (6 items)
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
             <DetailCard />
           </SwiperSlide>
           <SwiperSlide>
@@ -223,10 +75,10 @@ const Home: React.FC = () => {
           </SwiperSlide>
         </Swiper>
 
-        <div className="custom-swiper-button-prev z-20  absolute left-[90px] top-[80px] xx:hidden md:hidden lg:hidden xl:block">
+        <div className="custom-swiper-button-prev z-20  absolute left-[90px] top-[80px]  xl:block xx:hidden">
           <img src={leftarrow} alt="Previous" />
         </div>
-        <div className="custom-swiper-button-next z-20 absolute top-[80px] right-[90px] xx:hidden md:hidden lg:hidden xl:block">
+        <div className="custom-swiper-button-next z-20 absolute top-[80px] right-[110px]  xl:block xx:hidden">
           <img src={rightarrow} alt="Next" />
         </div>
       </div>
