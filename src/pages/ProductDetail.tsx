@@ -9,7 +9,7 @@ import Plus from "../assets/svg/plus.svg";
 import Minus from "../assets/svg/Minus.svg";
 
 import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
-
+import { BallTriangle } from "react-loader-spinner";
 import { getDetail } from "../app/slice/detailSlice";
 import tick from "../assets/svg/tick.png";
 const ProductDetail: React.FC = () => {
@@ -23,7 +23,20 @@ const ProductDetail: React.FC = () => {
     }
   }, [dispatch, id]);
   if (!detail) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center z-40 h-full">
+        <BallTriangle
+          height={100}
+          width={100}
+          radius={5}
+          color="#4fa94d"
+          ariaLabel="ball-triangle-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      </div>
+    );
   }
   const product = Array.isArray(detail) ? detail[0] : detail;
 

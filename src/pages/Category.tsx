@@ -170,47 +170,8 @@ const Category: React.FC = () => {
                                 </button>
                               </div>
 
-                              <div className="w-[30px] h-[30px] bg-bg-primary rounded-full flex justify-center items-center ">
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M1.89209 1.94104H3.13996C3.91449 1.94104 4.52408 2.608 4.45953 3.37537L3.86429 10.5183C3.76388 11.6873 4.68902 12.6913 5.86517 12.6913H13.503C14.5357 12.6913 15.4393 11.8451 15.5182 10.8195L15.9054 5.4408C15.9915 4.25031 15.0879 3.28213 13.8902 3.28213H4.63166"
-                                    stroke="white"
-                                    stroke-width="1.47531"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M12.1115 16.2844C12.6066 16.2844 13.008 15.883 13.008 15.3879C13.008 14.8928 12.6066 14.4915 12.1115 14.4915C11.6164 14.4915 11.2151 14.8928 11.2151 15.3879C11.2151 15.883 11.6164 16.2844 12.1115 16.2844Z"
-                                    stroke="white"
-                                    stroke-width="1.47531"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M6.37448 16.2844C6.86958 16.2844 7.27093 15.883 7.27093 15.3879C7.27093 14.8928 6.86958 14.4915 6.37448 14.4915C5.87938 14.4915 5.47803 14.8928 5.47803 15.3879C5.47803 15.883 5.87938 16.2844 6.37448 16.2844Z"
-                                    stroke="white"
-                                    stroke-width="1.47531"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                  <path
-                                    d="M6.91211 6.24402H15.5181"
-                                    stroke="white"
-                                    stroke-width="1.47531"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </svg>
+                              <div className="w-[50px] h-[50px] bg-bgprimary rounded-full flex justify-center items-center ">
+                                <img src={basket} alt="" />
                               </div>
                             </div>
                             <div>
