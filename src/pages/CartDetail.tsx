@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
 import { getCart, getProductDetails, Cart } from "../app/slice/cartSlice";
 import Plus from "../assets/svg/plus.svg";
-
+import Close from "../assets/svg/close-circle.svg";
 import Minus from "../assets/svg/Minus.svg";
 const CartDetail = () => {
   const dispatch = useAppDispatch();
@@ -76,7 +76,10 @@ const CartDetail = () => {
           </div>
         </td>
         <td className="font-medium text-[22px] text-darkgray xx:text-[18px] pl-8">
-          ${selectedProducts[index]?.price}
+          <div className="flex gap-3">
+            ${selectedProducts[index]?.price}
+            <img src={Close} alt="" />
+          </div>
         </td>
       </tr>
 
