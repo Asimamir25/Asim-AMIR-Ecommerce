@@ -1,0 +1,26 @@
+/* src/styles/tailwind.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../constants/Font.css"; /* Additional styles */
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+input:checked {
+  background-color: #3f3f3f; /* Change this to your desired red color */
+  border-color: red; /* Change this to your desired red color */
+}
+input:checked::before {
+  content: "\2713";
+  display: inline-block;
+  color: white;
+  padding: 6px;
+  /* Ensure the check mark is vertically centered */
+  /* Center the check mark vertically */
+  text-align: center; /* Center the check mark horizontally */
+  width: 100%; /* Ensure the check mark takes the full width of the checkbox */
+}
