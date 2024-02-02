@@ -1,5 +1,5 @@
 import React from "react";
-import speaker from "../../assets/2 1.png";
+import speaker from "../../assets/speaker.png";
 const DetailCard = () => {
   return (
     <div>

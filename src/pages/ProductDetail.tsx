@@ -7,11 +7,12 @@ import facebook from "../assets/svg/facebook.svg";
 import whatsapp from "../assets/svg/whatsapp.svg";
 import Plus from "../assets/svg/plus.svg";
 import Minus from "../assets/svg/Minus.svg";
-
 import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
 import { BallTriangle } from "react-loader-spinner";
 import { getDetail } from "../app/slice/detailSlice";
 import tick from "../assets/svg/tick.png";
+
+
 const ProductDetail: React.FC = () => {
   const { id } = useParams(); //import from react-router-dom
   const dispatch = useAppDispatch();
@@ -141,15 +142,15 @@ const ProductDetail: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between xx:flex-col gap-2 items-center">
+            <div className="flex justify-around xx:flex-col gap-2 items-center">
               <button className="bg-bgprimary rounded-[32.4px]">
-                <p className="px-[56px] py-[19.5px] text-[22.7px] text-white font-bold md:font-semibold md:px-[20px] xx:px-[20px] xx:font-normal">
+                <p className=" xl:px-[56px] xl:py-[19.5px] text-[22.7px] text-white font-bold md:font-semibold md:px-[20px] xx:px-[20px] xx:font-normal">
                   Add to cart
                 </p>
               </button>
 
               <button className="bg-bgprimary rounded-[32.4px] md:hidden lg:block">
-                <p className="px-[56px] py-[19.5px] text-[22.7px] text-white font-bold md:font-normal md:px-[20px] xx:px-[20px] xx:font-normal">
+                <p className="xl:px-[56px] py-[19.5px] text-[22.7px] text-white xl:font-bold md:font-normal md:px-[20px] xx:px-[20px] xx:font-normal">
                   Buy it Now
                 </p>
               </button>

@@ -8,15 +8,14 @@ import { BallTriangle } from "react-loader-spinner";
 const CartDetail = () => {
   const dispatch = useAppDispatch();
   const [selectedProducts, setSelectedProducts] = useState<any[]>([]);
-
-  useEffect(() => {
-    dispatch(getCart());
-  }, [dispatch]);
-
   const { cartItems, error, loading } = useAppSelector((state) => state.cart);
   const handleCart = () => {
     setSelectedProducts([]);
   };
+
+  useEffect(() => {
+    dispatch(getCart());
+  }, [dispatch]);
 
   useEffect(() => {
     const fetchProductDetails = async () => {

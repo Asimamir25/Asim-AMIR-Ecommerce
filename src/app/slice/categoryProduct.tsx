@@ -1,10 +1,8 @@
-// src/app/categoryProduct.ts
-
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 interface CategoryProductState {
-  selectedCategory: string[]; // Change the type to an array of strings
-  data: any[]; // Change this type to match your API response structure
+  selectedCategory: string[];
+  data: any[];
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
@@ -23,24 +21,20 @@ export const fetchCategoryData = createAsyncThunk<any[], string>(
 const categoryProduct = createSlice({
   name: "categoryProduct",
   initialState: {
-    selectedCategory: [], // Initialize as an empty array
+    selectedCategory: [],
     data: [],
     status: "idle",
     error: null,
   } as CategoryProductState,
   reducers: {
-    // Modify setSelectedCategory to handle both single and multiple selections
     setSelectedCategory: (state, action) => {
       const newCategory = action.payload;
 
-      // Check if the category is already selected
       const index = state.selectedCategory.indexOf(newCategory);
 
       if (index === -1) {
-        // If not selected, add to the array
         state.selectedCategory.push(newCategory);
       } else {
-        // If already selected, remove it from the array
         state.selectedCategory.splice(index, 1);
       }
     },

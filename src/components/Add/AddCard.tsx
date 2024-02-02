@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import camera from "../../assets/camera.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
 const AddCard = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const swiperRef = useRef<any>(null);

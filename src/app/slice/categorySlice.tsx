@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import axiosInstance from "../../api/api";
 
 export type Category = string;
 export interface CounterState {
@@ -17,14 +17,10 @@ const initialState: CounterState = {
 
 export const getCategory = createAsyncThunk("category", async () => {
   try {
-    const response = await axios.get(
-      "https://fakestoreapi.com/products/categories"
-    );
+    const response = await axiosInstance.get("/products/categories");
     return response.data;
   } catch (error) {
-    // Handle errors if needed
     console.error("Error fetching products:", error);
-    throw error;
   }
 });
 

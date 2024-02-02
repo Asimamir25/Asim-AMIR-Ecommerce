@@ -1,10 +1,12 @@
 import React from "react";
-import person2 from "../../assets/Frame 61.png";
-import Brand1 from "../../assets/brand-4.png";
-import Brand2 from "../../assets/brand-5.png";
-import Brand3 from "../../assets/brand-6.png";
-import Brand4 from "../../assets/brand-7.png";
-import Brand5 from "../../assets/brand-8.png";
+import person1 from "../../assets/review-person-1.png";
+import person2 from "../../assets/review-person-2.png";
+import person3 from "../../assets/review-person-3.png";
+import electronic from "../../assets/electronic_brand.png";
+import spacingtech from "../../assets/Spacingtech.png";
+import electronicbran4 from "../../assets/electronicbrand-4.png";
+import electronicbran5 from "../../assets/electronicbrand-5.png";
+import electronicbrand2 from "../../assets/electronicbrand-2.png";
 import Boxtic from "../../assets/svg/box-tick.svg";
 import crown from "../../assets/svg/crown.svg";
 import security from "../../assets/svg/shield-security.svg";
@@ -49,7 +51,7 @@ const Review = () => {
       <div className="review px-[61px] py-8  flex flex-wrap justify-between gap-3 xx:mx-auto ">
         <div className="b border border-[#BABABA] w-[400px] rounded-[20px] p-[16px] text-partialcolor md:w-full lg:w-[400px] xl:[400px] ">
           <div className="imag-con flex items-center gap-7">
-            <img src={person2} alt="" />
+            <img src={person1} alt="" />
 
             <p>Savannah Nguyen</p>
           </div>
@@ -77,7 +79,7 @@ const Review = () => {
         </div>
         <div className="b border border-[#BABABA] w-[400px] rounded-[20px] p-[16px] text-partialcolor md:w-full lg:w-[400px] xl:[400px]">
           <div className="imag-con flex items-center gap-7">
-            <img src={person2} alt="" />
+            <img src={person3} alt="" />
 
             <p>Savannah Nguyen</p>
           </div>
@@ -98,11 +100,11 @@ const Review = () => {
       </div>
       <div className="services bg-container rounded-lg md:m-9 xx:w-full m-0">
         <div className="flex justify-between px-[34px] py-[47px] lg:gap-[40px] flex-col  xl:flex-row xx:flex gap-3 w-full">
-          <img src={Brand1} alt="" />
-          <img src={Brand2} alt="" />
-          <img src={Brand3} alt="" />
-          <img src={Brand4} alt="" />
-          <img src={Brand5} alt="" />
+          <img src={electronic} alt="brand1" />
+          <img src={spacingtech} alt="brand2" />
+          <img src={electronicbran4} alt="brand3" />
+          <img src={electronicbran5} alt="brand4" />
+          <img src={electronicbrand2} alt="brand5" />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../../assets/logo-1 1.png";
+import logo from "../../assets/logo-1.png";
 import headphone from "../../assets/svg/headphone.svg";
 import google from "../../assets/svg/google.svg";
 import facebook from "../../assets/svg/facebook.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
-import elipce from "../../assets/svg/Ellipse 6.svg";
+import listcircle from "../../assets/svg/bg-circle.svg";
 import send from "../../assets/svg/send-2.svg";
 const Footer: React.FC = () => {
   return (
@@ -61,31 +61,31 @@ const Footer: React.FC = () => {
 
             <ul className=" flex flex-col gap-4 list-none">
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
@@ -98,31 +98,31 @@ const Footer: React.FC = () => {
             </p>
             <ul className=" flex flex-col gap-4 list-none">
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext ">
                   Brownze arnold
                 </li>
@@ -135,31 +135,31 @@ const Footer: React.FC = () => {
             </p>
             <ul className=" flex flex-col gap-4 list-none">
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>
               </div>
               <div className="flex gap-2">
-                <img src={elipce} alt="" />
+                <img src={listcircle} alt="" />
                 <li className=" text-[19px] text-primarytext">
                   Brownze arnold
                 </li>

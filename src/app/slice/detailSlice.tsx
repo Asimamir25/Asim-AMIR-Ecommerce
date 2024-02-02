@@ -1,13 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import axiosInstance from "../../api/api";
 export interface Product {
   id: Number;
   title: string;
   category: string;
   price: number;
   image: string;
-  // Other properties of the product...
 }
 export interface DetailState {
   data: Product | Product[] | null;
@@ -21,13 +20,12 @@ const initialState: DetailState = {
   error: null,
 };
 
-export const getDetail = createAsyncThunk("detail", async (id:number) => {
+export const getDetail = createAsyncThunk("detail", async (id: number) => {
   try {
-    const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    const response = await axiosInstance.get(`/products/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error fetching product details:", error);
-    throw error;
   }
 });
 

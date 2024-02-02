@@ -1,7 +1,6 @@
-// cartSlice.ts
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+import axiosInstance from "../../api/api";
 
 export interface Cart {
   productId: number;
@@ -37,9 +36,7 @@ export const getProductDetails = createAsyncThunk(
   "cart/getProductDetails",
   async (productId: number): Promise<Product> => {
     try {
-      const response = await axios.get(
-        `https://fakestoreapi.com/products/${productId}`
-      );
+      const response = await axiosInstance.get(`/products/${productId}`);
       return response.data;
     } catch (error) {
       console.error("Error fetching product details:", error);
@@ -52,9 +49,8 @@ export const getCart = createAsyncThunk(
   "cart/getCart",
   async (): Promise<{ cartItems: Cart[] }> => {
     try {
-      const response = await axios.get("https://fakestoreapi.com/carts/5");
+      const response = await axiosInstance.get("/carts/5");
 
-      // Adapt the response structure to match your Redux state
       const cartItems = response.data.products.map((product: Cart) => ({
         productId: product.productId,
         quantity: product.quantity,

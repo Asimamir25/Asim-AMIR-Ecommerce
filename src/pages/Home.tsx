@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import speaker from "../assets/2 1.png";
 import leftarrow from "../assets/svg/leftarrow.svg";
 import rightarrow from "../assets/svg/rightarrow.svg";
-import star from "../assets/Vector.png";
-import speakeradd from "../assets/11 1.png";
-import xbox from "../assets/Frame 29.png";
+import star from "../assets/star.png";
+import speakeradd from "../assets/speaker_add.png";
+import xbox from "../assets/emulator.png";
 import { useAppDispatch } from "../app/hook/hooks";
 import { getProduct } from "../app/slice/productSlice";
 import Popular from "../components/Popular/Popular";
@@ -32,8 +32,8 @@ const Home: React.FC = () => {
 
   return (
     <>
+  
       <AddCard />
-
       <div className="crouse px-[108px] py-6 flex relative justify-between xx:px-[10px] gap-2 md:gap-3 ">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -74,7 +74,6 @@ const Home: React.FC = () => {
             <DetailCard />
           </SwiperSlide>
         </Swiper>
-
         <div className="custom-swiper-button-prev z-20  absolute left-[90px] top-[80px]  xl:block xx:hidden">
           <img src={leftarrow} alt="Previous" />
         </div>
@@ -82,12 +81,10 @@ const Home: React.FC = () => {
           <img src={rightarrow} alt="Next" />
         </div>
       </div>
-
       <Popular />
       <div>
         <Adds />
       </div>
-
       <div className="add2 min-h-[500px] w-full flex px-[55px] py-[50px] gap-5 md:flex flex-col    xl:flex-row lg:flex-row xx:hidden ">
         <div className="right_add w-[60%] border overflow-hidden h-auto border-bordercol1 rounded-[20px] flex md:w-full lg:w-1/2 xl:w-1/2  ">
           <div className="img h-full flex justify-center items-center">
@@ -125,7 +122,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="left_add w-[40%]  h-full flex flex-col  gap-14 md:w-full lg:w-[50%] ">
           <div className="left1 h-1/2 border border-bordercol1 rounded-[20px] flex justify-around   ">
             <img src={xbox} alt="" />
@@ -169,8 +165,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <Review />
-
+      <Review />{" "}
       <div className="popular-product px-[61px] py-12 flex justify-between ">
         <p className="font-poppins font-semibold text-primarytext text-[25px] ">
           Latest news
@@ -180,8 +175,6 @@ const Home: React.FC = () => {
         </div>
       </div>
       <LatestProduct />
-
-      {/* <Footer /> */}
     </>
   );
 };

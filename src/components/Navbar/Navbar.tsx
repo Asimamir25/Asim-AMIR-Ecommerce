@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/logo 1.png";
+import logo from "../../assets/logo(white).png";
 import user from "../../assets/svg/user.svg";
 import heart from "../../assets/svg/heart.png";
 import basket from "../../assets/svg/shopping-cart.svg";
@@ -27,15 +27,15 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="nav_right flex gap-6 pr-3 ">
+        <div className="nav_right flex gap-6 pr-3 items-center ">
           <div className="right-elem flex gap-3">
-            <img src={user} alt="user" />
+            <img src={user} alt="user w-[24px]" />
             <p className="text-white  hidden md:block">Sign in </p>
           </div>
           <div className="right-elem flex gap-3">
             <div className="icon flex items-center">
               <div className="icon-svg">
-                <img src={heart} alt="heart" />
+                <img src={heart} alt="heart w-[24px] " />
               </div>
               <div className="counter w-[14.21px] h-[15px] bg-[#EDA415] rounded-full flex justify-center items-center xx:w-[24px] ">
                 <div className="text-white text-[9px] font-normal flex justify-center items-center text-center">
