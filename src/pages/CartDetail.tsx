@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
-import { getCart, getProductDetails, Cart } from "../app/slice/cartSlice";
+import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
+import { getCart, getProductDetails } from "../redux/slice/cartSlice";
+import { Cart } from "../type/types";
 import Plus from "../assets/svg/plus.svg";
 import Close from "../assets/svg/close-circle.svg";
 import Minus from "../assets/svg/Minus.svg";

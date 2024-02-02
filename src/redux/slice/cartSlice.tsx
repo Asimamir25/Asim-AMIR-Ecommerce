@@ -1,28 +1,29 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
+import { Product } from "../../type/types";
+import { Cart } from "../../type/types";
+// export type Cart = {
+//   productId: number;
+//   quantity: number;
+// };
 
-export interface Cart {
-  productId: number;
-  quantity: number;
-}
+// export type Product = {
+//   id: number;
+//   title: string;
+//   category: string;
+//   price: number;
+//   description: string;
+//   image: string;
+// };
 
-export interface Product {
-  id: number;
-  title: string;
-  category: string;
-  price: number;
-  description: string;
-  image: string;
-}
-
-export interface CartState {
+export type CartState = {
   cartItems: Cart[];
   loading: boolean;
   error: string | null;
   selectedProduct: Product | null;
   productDetails: Product[];
-}
+};
 
 const initialState: CartState = {
   cartItems: [],

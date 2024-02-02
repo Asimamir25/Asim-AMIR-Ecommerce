@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getCategory } from "../../app/slice/categorySlice";
-import { useAppDispatch, useAppSelector } from "../../app/hook/hooks";
+import { getCategory } from "../../redux/slice/categorySlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
 
 interface FilterProps {
   handleCategoryClick: (category: string) => void;

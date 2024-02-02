@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import heart from "../../assets/heartcarticon.png";
 import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../app/hook/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
 import basket from "../../assets/svg/shopping-cart.svg";
-import { getProduct } from "../../app/slice/productSlice";
+import { getProduct } from "../../redux/slice/productSlice";
 import Viewframe from "../../assets/svg/View-frame.svg";
 import star from "../../assets/star.png";
-import { Product } from "../../app/slice/productSlice";
+import { Product } from "../../type/types";
 
 import {
   fetchCategoryData,
   setSelectedCategory,
-} from "../../app/slice/categoryProduct";
+} from "../../redux/slice/categoryProduct";
 // ... (other imports)
 const Popular = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import star from "../assets/star.png";
-import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
 import { Link } from "react-router-dom";
-import { getProduct } from "../app/slice/productSlice";
+import { getProduct } from "../redux/slice/productSlice";
 import heart from "../assets/heartcarticon.png";
 import Filter from "../components/filter/Filter";
-import Adds from "../components/Add/Adds";
+import Adds from "../components/add/Adds";
 import basket from "../assets/svg/shopping-cart.svg";
 import Viewframe from "../assets/svg/View-frame.svg";
 import {
   fetchCategoryData,
   setSelectedCategory,
-} from "../app/slice/categoryProduct";
+} from "../redux/slice/categoryProduct";
 
 const Category: React.FC = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);

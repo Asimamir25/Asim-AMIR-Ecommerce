@@ -1,18 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
-export interface Product {
-  id: Number;
-  title: string;
-  category: string;
-  price: number;
-  image: string;
-}
-export interface DetailState {
+import { Product } from "../../type/types";
+// export type Product = {
+//   id: Number;
+//   title: string;
+//   category: string;
+//   price: number;
+//   image: string;
+// };
+export type DetailState = {
   data: Product | Product[] | null;
   loading: boolean;
   error: string | null;
-}
+};
 
 const initialState: DetailState = {
   data: null,

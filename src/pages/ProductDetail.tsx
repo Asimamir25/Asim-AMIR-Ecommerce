@@ -7,9 +7,9 @@ import facebook from "../assets/svg/facebook.svg";
 import whatsapp from "../assets/svg/whatsapp.svg";
 import Plus from "../assets/svg/plus.svg";
 import Minus from "../assets/svg/Minus.svg";
-import { useAppDispatch, useAppSelector } from "../app/hook/hooks";
+import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
 import { BallTriangle } from "react-loader-spinner";
-import { getDetail } from "../app/slice/detailSlice";
+import { getDetail } from "../redux/slice/detailSlice";
 import tick from "../assets/svg/tick.png";
 
 

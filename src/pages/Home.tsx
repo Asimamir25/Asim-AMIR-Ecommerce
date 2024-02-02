@@ -6,13 +6,13 @@ import rightarrow from "../assets/svg/rightarrow.svg";
 import star from "../assets/star.png";
 import speakeradd from "../assets/speaker_add.png";
 import xbox from "../assets/emulator.png";
-import { useAppDispatch } from "../app/hook/hooks";
-import { getProduct } from "../app/slice/productSlice";
-import Popular from "../components/Popular/Popular";
-import Adds from "../components/Add/Adds";
-import Review from "../components/Review/Review";
-import LatestProduct from "../components/LatestProduct";
-import AddCard from "../components/Add/AddCard";
+import { useAppDispatch } from "../redux/hook/hooks";
+import { getProduct } from "../redux/slice/productSlice";
+import Popular from "../components/popular/Popular";
+import Adds from "../components/add/Adds";
+import Review from "../components/review/Review";
+import LatestProduct from "../components/latestproduct/LatestProduct";
+import AddCard from "../components/add/AddCard";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import DetailCard from "../components/Add/DetailCard";
+import DetailCard from "../components/add/DetailCard";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -32,7 +32,6 @@ const Home: React.FC = () => {
 
   return (
     <>
-  
       <AddCard />
       <div className="crouse px-[108px] py-6 flex relative justify-between xx:px-[10px] gap-2 md:gap-3 ">
         <Swiper

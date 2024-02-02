@@ -4,7 +4,7 @@ import "./styles/tailwind.css"; // Import Tailwind CSS styles
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { store } from "./app/store/store";
+import { store } from "./redux/store/store";
 import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

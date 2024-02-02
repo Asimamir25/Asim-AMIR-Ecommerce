@@ -1,6 +1,6 @@
 import React from "react";
-import blog from "../assets/Blog.png";
-import blog2 from "../assets/Blog-2.png";
+import blog from "../../assets/Blog.png";
+import blog2 from "../../assets/Blog-2.png";
 
 const LatestProduct = () => {
   return (

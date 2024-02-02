@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-interface CategoryProductState {
+type CategoryProductState = {
   selectedCategory: string[];
   data: any[];
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
-}
+};
 
 export const fetchCategoryData = createAsyncThunk<any[], string>(
   "categoryProduct/fetchCategoryData",
