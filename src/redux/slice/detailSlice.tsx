@@ -44,9 +44,9 @@ export const detailSlice = createSlice({
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(getDetail.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(getDetail.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = (action.error.message ?? null) as string | null;
         state.data = [];
       });
   },

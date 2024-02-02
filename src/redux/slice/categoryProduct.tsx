@@ -1,23 +1,24 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
+import axiosInstance from "../../api/api";
+import { Product } from "../../type/types";
 type CategoryProductState = {
   selectedCategory: string[];
-  data: any[];
+  data: Product[];
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 };
 
-export const fetchCategoryData = createAsyncThunk<any[], string>(
+export const fetchCategoryData = createAsyncThunk<Product[], string>(
   "categoryProduct/fetchCategoryData",
   async (category) => {
-    const response = await fetch(
-      `https://fakestoreapi.com/products/category/${category}`
-    );
-    const data = await response.json();
-    return data;
+    try {
+      const response = await axiosInstance.get(
+        `/products/category/${category}`
+      );
+      return response.data;
+    } catch (error) {}
   }
 );
-
 const categoryProduct = createSlice({
   name: "categoryProduct",
   initialState: {

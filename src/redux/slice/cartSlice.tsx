@@ -3,22 +3,9 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
 import { Product } from "../../type/types";
 import { Cart } from "../../type/types";
-// export type Cart = {
-//   productId: number;
-//   quantity: number;
-// };
-
-// export type Product = {
-//   id: number;
-//   title: string;
-//   category: string;
-//   price: number;
-//   description: string;
-//   image: string;
-// };
 
 export type CartState = {
-  cartItems: Cart[];
+  result: Cart[];
   loading: boolean;
   error: string | null;
   selectedProduct: Product | null;
@@ -26,44 +13,36 @@ export type CartState = {
 };
 
 const initialState: CartState = {
-  cartItems: [],
+  result: [],
   loading: false,
   error: null,
   selectedProduct: null,
   productDetails: [],
 };
 
-export const getProductDetails = createAsyncThunk(
-  "cart/getProductDetails",
-  async (productId: number): Promise<Product> => {
-    try {
-      const response = await axiosInstance.get(`/products/${productId}`);
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching product details:", error);
-      throw error;
-    }
+export const getCart = createAsyncThunk("cart/getCart", async () => {
+  try {
+    const response = await axiosInstance.get("/carts/5");
+
+    const cartItems = response.data.products.map((product: Cart) => ({
+      productId: product.productId,
+      quantity: product.quantity,
+    }));
+
+    const product = cartItems.map(async (item: Product) => {
+      const productres = await axiosInstance.get(`/products/${item.productId}`);
+      return productres.data;
+    });
+    const result = await Promise.all(product);
+
+    return {
+      result,
+    };
+  } catch (error) {
+    console.error("Error fetching cart:", error);
+    throw error;
   }
-);
-
-export const getCart = createAsyncThunk(
-  "cart/getCart",
-  async (): Promise<{ cartItems: Cart[] }> => {
-    try {
-      const response = await axiosInstance.get("/carts/5");
-
-      const cartItems = response.data.products.map((product: Cart) => ({
-        productId: product.productId,
-        quantity: product.quantity,
-      }));
-
-      return { cartItems };
-    } catch (error) {
-      console.error("Error fetching cart:", error);
-      throw error;
-    }
-  }
-);
+});
 
 export const cartSlice = createSlice({
   name: "cart",
@@ -77,32 +56,13 @@ export const cartSlice = createSlice({
       .addCase(getCart.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.cartItems = action.payload.cartItems;
+        state.result = action.payload.result;
       })
-      .addCase(getCart.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(getCart.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
-        state.cartItems = [];
-      })
-      .addCase(getProductDetails.pending, (state) => {
-        state.loading = true;
-      })
-      .addCase(
-        getProductDetails.fulfilled,
-        (state, action: PayloadAction<Product>) => {
-          state.loading = false;
-          state.error = null;
-          state.selectedProduct = action.payload;
-        }
-      )
-      .addCase(
-        getProductDetails.rejected,
-        (state, action: PayloadAction<any>) => {
-          state.loading = false;
-          state.error = action.payload;
-          state.selectedProduct = null;
-        }
-      );
+        state.error = (action.error.message ?? null) as string | null;
+        state.result = [];
+      });
   },
 });
 

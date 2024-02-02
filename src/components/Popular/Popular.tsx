@@ -14,7 +14,7 @@ import {
 } from "../../redux/slice/categoryProduct";
 // ... (other imports)
 const Popular = () => {
-  const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const dispatch = useAppDispatch();
   const product = useAppSelector((state) => state.product.data);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
@@ -62,7 +62,7 @@ const Popular = () => {
 
       <div className="product flex flex-wrap justify-center items-center p-10 lg:justify-between xl:justify-between md:gap-3">
         {!currentCategory
-          ? product?.map((product: any) => (
+          ? product?.map((product: Product) => (
               <Link key={product.id} to={`/product/${product.id}`}>
                 <div
                   className={`rounded-[20px] border-[0.98px] border-bordercol1 w-[308px] h-[310px] my-1 p-1 lg:w-[230px] xl:w-[308px] ${
@@ -129,7 +129,7 @@ const Popular = () => {
                 </div>
               </Link>
             ))
-          : selectedCategory?.map((product: any) => (
+          : selectedCategory?.map((product: Product) => (
               <Link key={product.id} to={`/product/${product.id}`}>
                 <div
                   className={`rounded-[20px] border-[0.98px] border-bordercol1 w-[308px] h-[310px] my-1 p-1 lg:w-[230px] xl:w-[308px] ${

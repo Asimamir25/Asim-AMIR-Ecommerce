@@ -9,6 +9,7 @@ import { Product } from "../../type/types";
 //   price: number;
 //   image: string;
 // };
+
 export type CounterState = {
   data: Product[];
   loading: boolean;
@@ -46,9 +47,9 @@ export const productSlice = createSlice({
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(getProduct.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(getProduct.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = (action.error.message ?? null) as string | null;
         state.data = [];
       });
   },

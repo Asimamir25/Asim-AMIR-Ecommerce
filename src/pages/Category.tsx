@@ -12,9 +12,10 @@ import {
   fetchCategoryData,
   setSelectedCategory,
 } from "../redux/slice/categoryProduct";
+import { Product } from "../type/types";
 
 const Category: React.FC = () => {
-  const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const dispatch = useAppDispatch();
   const product = useAppSelector((state) => state.product.data);
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
@@ -41,7 +42,7 @@ const Category: React.FC = () => {
         <div className="left w-3/4  xx:mx-auto ">
           <div className="product flex flex-wrap justify-center items-center lg:justify-between xl:justify-between">
             {!currentCategory
-              ? product?.slice(0, 7).map((product: any) => (
+              ? product?.slice(0, 7).map((product: Product) => (
                   <Link key={product.id} to={`/product/${product.id}`}>
                     <div
                       className={`rounded-[20px] border-[0.98px] border-bordercol1 w-[308px] h-[310px] my-1 p-1 lg:w-[230px] xl:w-[308px] ${
@@ -107,7 +108,7 @@ const Category: React.FC = () => {
                     </div>
                   </Link>
                 ))
-              : selectedCategory?.map((product: any) => (
+              : selectedCategory?.map((product: Product) => (
                   <Link key={product.id} to={`/product/${product.id}`}>
                     <div
                       className={`rounded-[20px] border-[0.98px] border-bordercol1 w-[308px] h-[310px] my-1 p-1 lg:w-[230px] xl:w-[308px] ${

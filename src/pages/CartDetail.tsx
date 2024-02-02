@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
-import { getCart, getProductDetails } from "../redux/slice/cartSlice";
+import { getCart } from "../redux/slice/cartSlice";
 import { Cart } from "../type/types";
 import Plus from "../assets/svg/plus.svg";
 import Close from "../assets/svg/close-circle.svg";
@@ -8,50 +8,23 @@ import Minus from "../assets/svg/Minus.svg";
 import { BallTriangle } from "react-loader-spinner";
 const CartDetail = () => {
   const dispatch = useAppDispatch();
-  const [selectedProducts, setSelectedProducts] = useState<any[]>([]);
-  const { cartItems, error, loading } = useAppSelector((state) => state.cart);
-  const handleCart = () => {
-    setSelectedProducts([]);
-  };
+
+  const { result, error, loading } = useAppSelector((state) => state.cart);
 
   useEffect(() => {
     dispatch(getCart());
   }, [dispatch]);
 
-  useEffect(() => {
-    const fetchProductDetails = async () => {
-      try {
-        if (cartItems && cartItems.length > 0) {
-          const promises = cartItems.map((item) =>
-            dispatch(getProductDetails(item.productId))
-          );
-
-          const responses = await Promise.all(promises);
-
-          setSelectedProducts(responses.map((response) => response.payload));
-        }
-      } catch (error) {
-        console.error("Error fetching product details:", error);
-      }
-    };
-
-    fetchProductDetails();
-  }, [dispatch, cartItems]);
-  const renderCartItem = (item: Cart, index: number) => (
-    <>
-      <tr key={item.productId} className="mt-7  ">
+  const renderCartItem = (item: Cart) => (
+    <React.Fragment key={item.id}>
+      <tr key={item.id} className="mt-7  ">
         <td className="flex">
-          {selectedProducts[index] && (
-            <img
-              src={selectedProducts[index].image}
-              alt={selectedProducts[index].title}
-              className="w-[126px]"
-            />
-          )}
+          <img src={item.image} alt={item.title} className="w-[126px]" />
+
           <div className="flex flex-col ml-3">
             <td className="w-[320px] xx:flex-col">
               <p className=" text-partialcolor font-bold text-[20px] break-words xx:text-[10px] ">
-                {selectedProducts[index]?.title}
+                {item.title}
               </p>
             </td>
             <td className="text-darkgray  text-[20px]">Color:Black</td>
@@ -60,7 +33,7 @@ const CartDetail = () => {
         </td>
 
         <td className="font-medium text-[22px] text-darkgray xx:text-[18px] ">
-          ${selectedProducts[index]?.price}
+          ${item.price}
         </td>
 
         <td>
@@ -81,7 +54,7 @@ const CartDetail = () => {
         </td>
         <td className="font-medium text-[22px] text-darkgray xx:text-[18px] pl-8">
           <div className="flex gap-3">
-            ${selectedProducts[index]?.price}
+            ${item.price}
             <img src={Close} alt="" />
           </div>
         </td>
@@ -92,7 +65,7 @@ const CartDetail = () => {
           <div className="border top-1"></div>
         </td>
       </tr>
-    </>
+    </React.Fragment>
   );
 
   return (
@@ -124,7 +97,7 @@ const CartDetail = () => {
                 <th className="px-4">Subtotal</th>
               </tr>
             </thead>
-            <tbody>{cartItems.map(renderCartItem)}</tbody>
+            <tbody>{result.map(renderCartItem)}</tbody>
           </table>
           <div className=" flex justify-between xx:gap-2">
             <div>
@@ -141,12 +114,7 @@ const CartDetail = () => {
               </p>
             </button>
             <button className=" rounded-[32px] mt-3  text-white border border-brown">
-              <p
-                className="md:px-[47px] py-[19.5px]  font-semibold text-brown xx:px-[50px] xx:py-[10px]  xx:text-[10px]"
-                onClick={() => {
-                  handleCart();
-                }}
-              >
+              <p className="md:px-[47px] py-[19.5px]  font-semibold text-brown xx:px-[50px] xx:py-[10px]  xx:text-[10px]">
                 Clear Cart
               </p>
             </button>
@@ -218,14 +186,14 @@ const CartDetail = () => {
                 <td className="text-[22px] font-semibold">$10,00</td>
               </tr>
             </tbody>
-            <div className="text-center">
-              <button className="bg-bgprimary rounded-[32px] mb-3  text-white">
-                <p className="px-[62px] py-[10.5px]   font-semibold ">
-                  Proceed to Checkout
-                </p>
-              </button>
-            </div>
           </table>
+          <div className="text-center">
+            <button className="bg-bgprimary rounded-[32px] mb-3  text-white">
+              <p className="px-[62px] py-[10.5px]   font-semibold ">
+                Proceed to Checkout
+              </p>
+            </button>
+          </div>
         </div>
       </div>
     </>

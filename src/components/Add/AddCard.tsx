@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import camera from "../../assets/camera.png";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperRef, SwiperClass } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -8,14 +8,14 @@ import "swiper/css/scrollbar";
 
 const AddCard = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperRef>(null);
   const handleRoundClick = (index: number) => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(index);
     }
   };
 
-  const handleSlideChange = (swiper: any) => {
+  const handleSlideChange = (swiper: SwiperClass) => {
     setActiveSlide(swiper.activeIndex);
   };
   return (

@@ -12,15 +12,14 @@ import { BallTriangle } from "react-loader-spinner";
 import { getDetail } from "../redux/slice/detailSlice";
 import tick from "../assets/svg/tick.png";
 
-
 const ProductDetail: React.FC = () => {
-  const { id } = useParams(); //import from react-router-dom
+  const { id } = useParams();
   const dispatch = useAppDispatch();
   const detail = useAppSelector((state) => state.detail.data);
 
   useEffect(() => {
     if (id) {
-      dispatch(getDetail(parseInt(id))); // Pass the id as an argument
+      dispatch(getDetail(parseInt(id)));
     }
   }, [dispatch, id]);
   if (!detail) {

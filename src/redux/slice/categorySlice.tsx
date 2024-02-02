@@ -38,9 +38,9 @@ export const categorySlice = createSlice({
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(getCategory.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(getCategory.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = (action.error.message ?? null) as string | null;
         state.data = [];
       });
   },
