@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
-import star from "../assets/svg/star.png";
+import star from "../assets/svg/star.svg";
 import { useParams } from "react-router-dom";
-import heart from "../assets/svg/heartframe.png";
+import heart from "../assets/svg/heartframe.svg";
 import google from "../assets/svg/google.svg";
 import facebook from "../assets/svg/facebook.svg";
 import whatsapp from "../assets/svg/whatsapp.svg";
 import Plus from "../assets/svg/plus.svg";
-import Minus from "../assets/svg/Minus.svg";
+import Minus from "../assets/svg/minus.svg";
 import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
 import { BallTriangle } from "react-loader-spinner";
 import { getDetail } from "../redux/slice/detailSlice";
-import tick from "../assets/svg/tick.png";
+import tick from "../assets/svg/tick.svg";
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams();
@@ -45,8 +45,8 @@ const ProductDetail: React.FC = () => {
       <div className="details w-full md:h-[661px]  p-7 flex  xx:flex-col h-auto ">
         <div className="w-1/2   flex justify-center border border-[#C0C0C0] rounded-[20px] xx:w-[330px] mx:auto">
           <img
-            src={product.image} // Replace with your image URL
-            alt="Your Alt Text"
+            src={product.image}
+            alt="Product"
             className="  w-auto object-contain xx:w-[220px]"
           />
         </div>

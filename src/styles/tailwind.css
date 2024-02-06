@@ -5,22 +5,21 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "../constants/Font.css"; /* Additional styles */
+@import "../constants/Font.css";
 
 body {
   font-family: "Poppins", sans-serif;
 }
 input:checked {
-  background-color: #3f3f3f; /* Change this to your desired red color */
-  border-color: red; /* Change this to your desired red color */
+  background-color: #3f3f3f;
+  border-color: red;
 }
 input:checked::before {
   content: "\2713";
   display: inline-block;
   color: white;
   padding: 6px;
-  /* Ensure the check mark is vertically centered */
-  /* Center the check mark vertically */
-  text-align: center; /* Center the check mark horizontally */
-  width: 100%; /* Ensure the check mark takes the full width of the checkbox */
+
+  text-align: center;
+  width: 100%;
 }

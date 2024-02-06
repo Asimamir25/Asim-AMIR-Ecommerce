@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import heart from "../../assets/heartcarticon.png";
+import heart from "../../assets/heartcartIcon.png";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
-import basket from "../../assets/svg/shopping-cart.svg";
+import basket from "../../assets/svg/shoppingCart.svg";
 import { getProduct } from "../../redux/slice/productSlice";
 import Viewframe from "../../assets/svg/View-frame.svg";
 import star from "../../assets/star.png";
@@ -12,7 +12,7 @@ import {
   fetchCategoryData,
   setSelectedCategory,
 } from "../../redux/slice/categoryProduct";
-// ... (other imports)
+
 const Popular = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const dispatch = useAppDispatch();
@@ -75,7 +75,7 @@ const Popular = () => {
                     <div className="flex justify-center items-start">
                       <img
                         src={product.image}
-                        alt=""
+                        alt="product"
                         className="h-[173px] w-[187px] max-h-40 "
                       />
                     </div>
@@ -142,7 +142,7 @@ const Popular = () => {
                     <div className="flex justify-center items-start">
                       <img
                         src={product.image}
-                        alt=""
+                        alt="Product"
                         className="h-[173px] w-[187px] max-h-40 "
                       />
                     </div>

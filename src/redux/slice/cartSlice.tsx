@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
 import { Product } from "../../type/types";
 import { Cart } from "../../type/types";
@@ -39,8 +38,7 @@ export const getCart = createAsyncThunk("cart/getCart", async () => {
       result,
     };
   } catch (error) {
-    console.error("Error fetching cart:", error);
-    throw error;
+    throw new Error("Error in getting Cart");
   }
 });
 

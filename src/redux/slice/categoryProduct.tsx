@@ -16,7 +16,9 @@ export const fetchCategoryData = createAsyncThunk<Product[], string>(
         `/products/category/${category}`
       );
       return response.data;
-    } catch (error) {}
+    } catch (error) {
+      throw new Error("Error in getting Category Product");
+    }
   }
 );
 const categoryProduct = createSlice({

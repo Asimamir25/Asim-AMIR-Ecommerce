@@ -1,18 +1,9 @@
-.text-custom-color {
-  color: var(
-    --text-color,
-    #292d32
-  ); /* Default to black if variable is not set */
-}
-.nav-custom-color {
-  color: var(
-    --text-color,
-    #003f62
-  ); /* Default to black if variable is not set */
-}
-.bg-color {
-  background-color: var(
-    --bg-color,
-    #003f62
-  ); /* Default to white if variable is not set */
-}
+/* .text-custom-color {
+  color: var(--text-color, #292d32);
+} */
+/* .nav-custom-color {
+  color: var(--text-color, #003f62);
+} */
+/* .bg-color {
+  background-color: var(--bg-color, #003f62);
+} */

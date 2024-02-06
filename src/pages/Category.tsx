@@ -3,10 +3,10 @@ import star from "../assets/star.png";
 import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
 import { Link } from "react-router-dom";
 import { getProduct } from "../redux/slice/productSlice";
-import heart from "../assets/heartcarticon.png";
+import heart from "../assets/heartcartIcon.png";
 import Filter from "../components/filter/Filter";
 import Adds from "../components/add/Adds";
-import basket from "../assets/svg/shopping-cart.svg";
+import basket from "../assets/svg/shoppingCart.svg";
 import Viewframe from "../assets/svg/View-frame.svg";
 import {
   fetchCategoryData,
@@ -55,7 +55,7 @@ const Category: React.FC = () => {
                         <div className="flex justify-center items-start">
                           <img
                             src={product.image}
-                            alt=""
+                            alt="Product"
                             className="h-[173px] w-[187px] max-h-40 "
                           />
                         </div>
@@ -121,7 +121,7 @@ const Category: React.FC = () => {
                         <div className="flex justify-center items-start">
                           <img
                             src={product.image}
-                            alt=""
+                            alt="Product"
                             className="h-[173px] w-[187px] max-h-40 "
                           />
                         </div>

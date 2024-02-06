@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../../assets/logo(white).png";
+import logo from "../../assets/logoPrimary.png";
 import user from "../../assets/svg/user.svg";
-import heart from "../../assets/svg/heart.png";
-import basket from "../../assets/svg/shopping-cart.svg";
-import arrow from "../../assets/svg/arrow-down.svg";
-import arrowwhite from "../../assets/svg/arrow-white.svg";
+import heart from "../../assets/svg/heart.svg";
+import basket from "../../assets/svg/shoppingCart.svg";
+import arrow from "../../assets/svg/arrowDown.svg";
+import arrowwhite from "../../assets/svg/arrowWhite.svg";
 import { Link } from "react-router-dom";
 const Navbar: React.FC = () => {
   return (
     <>
-      <div className="navbar bg-color p-4 md:px-20 flex justify-between items-center md:py-6 mx-auto  ">
+      <div className="navbar bg-partialcolor p-4 md:px-20 flex justify-between items-center md:py-6 mx-auto  ">
         <div className="nav_left  flex  items-center gap-20 pr-24 ">
           <Link to="/">
             <img src={logo} alt="" className=" min-h[39px]" />

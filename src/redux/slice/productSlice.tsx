@@ -1,14 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
 import { Product } from "../../type/types";
-// export type Product = {
-//   id: number;
-//   title: string;
-//   category: string;
-//   price: number;
-//   image: string;
-// };
 
 export type CounterState = {
   data: Product[];
@@ -29,7 +21,7 @@ export const getProduct = createAsyncThunk("product", async () => {
     const response = await axiosInstance.get("/products?limit=8");
     return response.data;
   } catch (error) {
-    console.error("Error fetching products:", error);
+    throw new Error("Error in getting Product");
   }
 });
 

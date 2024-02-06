@@ -23,7 +23,6 @@ module.exports = {
         bgdark: "#434343",
         darkblack: "#232323",
         brown: "#C33131",
-        // Add more custom colors as needed
       },
       screens: {
         xx: { min: "300px", max: "640px" },

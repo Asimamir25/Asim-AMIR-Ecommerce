@@ -1,15 +1,15 @@
 import React from "react";
-import person1 from "../../assets/review-person-1.png";
-import person2 from "../../assets/review-person-2.png";
-import person3 from "../../assets/review-person-3.png";
-import electronic from "../../assets/electronic_brand.png";
-import spacingtech from "../../assets/Spacingtech.png";
-import electronicbran4 from "../../assets/electronicbrand-4.png";
-import electronicbran5 from "../../assets/electronicbrand-5.png";
-import electronicbrand2 from "../../assets/electronicbrand-2.png";
-import Boxtic from "../../assets/svg/box-tick.svg";
+import person1 from "../../assets/reviewPerson1.png";
+import person2 from "../../assets/reviewPerson2.png";
+import person3 from "../../assets/reviewPerson3.png";
+import electronic from "../../assets/electronicBrand1.png";
+import spacingtech from "../../assets/spacingTech.png";
+import electronicbran4 from "../../assets/electronicBrand4.png";
+import electronicbran5 from "../../assets/electronicBrand5.png";
+import electronicbrand2 from "../../assets/electronicBrand2.png";
+import Boxtic from "../../assets/svg/boxTick.svg";
 import crown from "../../assets/svg/crown.svg";
-import security from "../../assets/svg/shield-security.svg";
+import security from "../../assets/svg/shieldSecurity.svg";
 const Review = () => {
   return (
     <div>

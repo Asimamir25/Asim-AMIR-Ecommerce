@@ -1,5 +1,5 @@
 import React from "react";
-import addimg from "../../assets/Laptop_addbar.png";
+import addimg from "../../assets/laptop_addbar.png";
 
 const Adds: React.FC = () => {
   return (

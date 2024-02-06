@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
-
-import speaker from "../assets/2 1.png";
 import leftarrow from "../assets/svg/leftarrow.svg";
 import rightarrow from "../assets/svg/rightarrow.svg";
 import star from "../assets/star.png";
-import speakeradd from "../assets/speaker_add.png";
+import speakeradd from "../assets/speakerAdd.png";
 import xbox from "../assets/emulator.png";
 import { useAppDispatch } from "../redux/hook/hooks";
 import { getProduct } from "../redux/slice/productSlice";
@@ -14,9 +12,7 @@ import Review from "../components/review/Review";
 import LatestProduct from "../components/latestproduct/LatestProduct";
 import AddCard from "../components/add/AddCard";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

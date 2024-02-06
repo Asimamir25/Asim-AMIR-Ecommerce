@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getCategory } from "../../redux/slice/categorySlice";
 import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
-
 interface FilterProps {
   handleCategoryClick: (category: string) => void;
 }
+
 const Filter: React.FC<FilterProps> = ({ handleCategoryClick }) => {
   const category = useAppSelector((state) => state.category.data);
   const dispatch = useAppDispatch();
-
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const handleAllCategoriesClick = () => {
     setSelectedCategory(null);

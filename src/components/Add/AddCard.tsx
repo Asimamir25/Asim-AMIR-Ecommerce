@@ -118,7 +118,7 @@ const AddCard = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide>
           <div className="add bg-white  py-[6px]   w-full flex flex-col justify-between md:flex-row  ">
             <div className="add-con mt-3 flex flex-col xx:order-2  justify-center lg:order-1 md:order-1 sm:pl-[175px] xx:text-center ">

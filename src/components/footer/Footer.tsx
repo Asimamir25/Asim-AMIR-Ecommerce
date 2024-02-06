@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../../assets/logo-1.png";
+import logo from "../../assets/logoSec.png";
 import headphone from "../../assets/svg/headphone.svg";
 import google from "../../assets/svg/google.svg";
 import facebook from "../../assets/svg/facebook.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
-import listcircle from "../../assets/svg/bg-circle.svg";
-import send from "../../assets/svg/send-2.svg";
+import listcircle from "../../assets/svg/bgCircle.svg";
+import send from "../../assets/svg/sendicon2.svg";
 const Footer: React.FC = () => {
   return (
     <footer className="relative bottom-0">

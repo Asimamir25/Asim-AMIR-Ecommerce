@@ -1,14 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../api/api";
 import { Product } from "../../type/types";
-// export type Product = {
-//   id: Number;
-//   title: string;
-//   category: string;
-//   price: number;
-//   image: string;
-// };
 export type DetailState = {
   data: Product | Product[] | null;
   loading: boolean;
@@ -26,7 +18,7 @@ export const getDetail = createAsyncThunk("detail", async (id: number) => {
     const response = await axiosInstance.get(`/products/${id}`);
     return response.data;
   } catch (error) {
-    console.error("Error fetching product details:", error);
+    throw new Error("Error in getting Detail");
   }
 });
 

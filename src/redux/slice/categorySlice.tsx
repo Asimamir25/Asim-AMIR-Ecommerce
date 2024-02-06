@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+
 import axiosInstance from "../../api/api";
 
 export type Category = string;
@@ -20,7 +20,7 @@ export const getCategory = createAsyncThunk("category", async () => {
     const response = await axiosInstance.get("/products/categories");
     return response.data;
   } catch (error) {
-    console.error("Error fetching products:", error);
+    throw new Error("Error in getting Category");
   }
 });
 
