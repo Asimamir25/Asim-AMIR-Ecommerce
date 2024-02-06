@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import star from "../assets/svg/star.svg";
 import { useParams } from "react-router-dom";
-import heart from "../assets/svg/heartframe.svg";
+import heart from "../assets/svg/heartFrame.svg";
 import google from "../assets/svg/google.svg";
 import facebook from "../assets/svg/facebook.svg";
 import whatsapp from "../assets/svg/whatsapp.svg";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
 import basket from "../../assets/svg/shoppingCart.svg";
 import { getProduct } from "../../redux/slice/productSlice";
-import Viewframe from "../../assets/svg/View-frame.svg";
+import Viewframe from "../../assets/svg/eyeFrame.svg";
 import star from "../../assets/star.png";
 import { Product } from "../../type/types";
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import leftarrow from "../assets/svg/leftarrow.svg";
-import rightarrow from "../assets/svg/rightarrow.svg";
+import leftarrow from "../assets/svg/leftArrow.svg";
+import rightarrow from "../assets/svg/rightArrow.svg";
 import star from "../assets/star.png";
 import speakeradd from "../assets/speakerAdd.png";
 import xbox from "../assets/emulator.png";

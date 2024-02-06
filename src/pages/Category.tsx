@@ -7,7 +7,7 @@ import heart from "../assets/heartcartIcon.png";
 import Filter from "../components/filter/Filter";
 import Adds from "../components/add/Adds";
 import basket from "../assets/svg/shoppingCart.svg";
-import Viewframe from "../assets/svg/View-frame.svg";
+import Viewframe from "../assets/svg/eyeFrame.svg";
 import {
   fetchCategoryData,
   setSelectedCategory,
