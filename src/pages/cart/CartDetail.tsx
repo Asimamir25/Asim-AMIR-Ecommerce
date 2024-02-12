@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
-import { getCart } from "../redux/slice/cartSlice";
-import { Cart } from "../type/types";
-import Plus from "../assets/svg/plus.svg";
-import Close from "../assets/svg/closeCircle.svg";
-import Minus from "../assets/svg/minus.svg";
+import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
+import { getCart } from "../../redux/slice/cartSlice";
+import { Cart } from "../../type/types";
+import Plus from "../../assets/svg/plus.svg";
+import Close from "../../assets/svg/closeCircle.svg";
+import Minus from "../../assets/svg/minus.svg";
 import { BallTriangle } from "react-loader-spinner";
 const CartDetail = () => {
   const dispatch = useAppDispatch();

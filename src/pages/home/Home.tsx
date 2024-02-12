@@ -1,23 +1,23 @@
 import React, { useEffect } from "react";
-import leftarrow from "../assets/svg/leftArrow.svg";
-import rightarrow from "../assets/svg/rightArrow.svg";
-import star from "../assets/star.png";
-import speakeradd from "../assets/speakerAdd.png";
-import xbox from "../assets/emulator.png";
-import { useAppDispatch } from "../redux/hook/hooks";
-import { getProduct } from "../redux/slice/productSlice";
-import Popular from "../components/popular/Popular";
-import Adds from "../components/add/Adds";
-import Review from "../components/review/Review";
-import LatestProduct from "../components/latestproduct/LatestProduct";
-import AddCard from "../components/add/AddCard";
+import leftarrow from "../../assets/svg/leftArrow.svg";
+import rightarrow from "../../assets/svg/rightArrow.svg";
+import star from "../../assets/star.png";
+import speakeradd from "../../assets/speakerAdd.png";
+import xbox from "../../assets/emulator.png";
+import { useAppDispatch } from "../../redux/hook/hooks";
+import { getProduct } from "../../redux/slice/productSlice";
+import Popular from "../../components/popular/Popular";
+import Adds from "../../components/add/Adds";
+import Review from "../../components/review/Review";
+import LatestProduct from "../../components/latestProduct/LatestProduct";
+import AddCard from "../../components/add/AddCard";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import DetailCard from "../components/add/DetailCard";
+import DetailCard from "../../components/add/DetailCard";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -46,6 +46,9 @@ const Home: React.FC = () => {
               slidesPerView: 2,
             },
             992: {
+              slidesPerView: 2,
+            },
+            1040: {
               slidesPerView: 3,
             },
           }}
@@ -72,7 +75,7 @@ const Home: React.FC = () => {
         <div className="custom-swiper-button-prev z-20  absolute left-[90px] top-[80px]  xl:block xx:hidden">
           <img src={leftarrow} alt="Previous" />
         </div>
-        <div className="custom-swiper-button-next z-20 absolute top-[80px] right-[110px]  xl:block xx:hidden">
+        <div className="custom-swiper-button-next z-20 absolute top-[80px] xl:right-[110px] lg:right-[140px] md:right-[100px]   xl:block xx:hidden">
           <img src={rightarrow} alt="Next" />
         </div>
       </div>

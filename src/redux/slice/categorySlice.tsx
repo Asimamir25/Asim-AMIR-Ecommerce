@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import axiosInstance from "../../api/api";
+import axiosInstance from "../../utils/api/api";
 
 export type Category = string;
 export type CounterState = {

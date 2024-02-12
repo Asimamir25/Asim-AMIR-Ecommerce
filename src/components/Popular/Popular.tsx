@@ -37,7 +37,7 @@ const Popular = () => {
 
   return (
     <div>
-      <div className="popular-product  md:px-[61px] py-12 flex justify-between xx:flex-col gap-6 xx:px-[10px] ">
+      <div className="popular-product  md:px-[61px] lg:px-[40px] py-12 flex justify-between xx:flex-col gap-6 xx:px-[10px] ">
         <p className="font-poppins font-semibold  text-[27px] text-primarytext">
           Popular products
         </p>
@@ -60,7 +60,7 @@ const Popular = () => {
         </div>
       </div>
 
-      <div className="product flex flex-wrap justify-center items-center p-10 lg:justify-between xl:justify-between md:gap-3">
+      <div className="product flex flex-wrap justify-center items-center p-10 lg:p-5 lg:justify-between xl:justify-between md:gap-3 ">
         {!currentCategory
           ? product?.map((product: Product) => (
               <Link key={product.id} to={`/product/${product.id}`}>
@@ -76,7 +76,7 @@ const Popular = () => {
                       <img
                         src={product.image}
                         alt="product"
-                        className="h-[173px] w-[187px] max-h-40 "
+                        className="h-[173px] w-[187px] object-contain "
                       />
                     </div>
                     <div className="absolute right-3 top-3">

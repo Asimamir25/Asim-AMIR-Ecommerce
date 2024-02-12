@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
-import star from "../assets/svg/star.svg";
+import star from "../../assets/svg/star.svg";
 import { useParams } from "react-router-dom";
-import heart from "../assets/svg/heartFrame.svg";
-import google from "../assets/svg/google.svg";
-import facebook from "../assets/svg/facebook.svg";
-import whatsapp from "../assets/svg/whatsapp.svg";
-import Plus from "../assets/svg/plus.svg";
-import Minus from "../assets/svg/minus.svg";
-import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
+import heart from "../../assets/svg/heartFrame.svg";
+import google from "../../assets/svg/google.svg";
+import facebook from "../../assets/svg/facebook.svg";
+import whatsapp from "../../assets/svg/whatsapp.svg";
+import Plus from "../../assets/svg/plus.svg";
+import Minus from "../../assets/svg/minus.svg";
+import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
 import { BallTriangle } from "react-loader-spinner";
-import { getDetail } from "../redux/slice/detailSlice";
-import tick from "../assets/svg/tick.svg";
+import { getDetail } from "../../redux/slice/detailSlice";
+import tick from "../../assets/svg/tick.svg";
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams();

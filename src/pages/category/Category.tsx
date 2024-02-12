@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import star from "../assets/star.png";
-import { useAppDispatch, useAppSelector } from "../redux/hook/hooks";
+import star from "../../assets/star.png";
+import { useAppDispatch, useAppSelector } from "../../redux/hook/hooks";
 import { Link } from "react-router-dom";
-import { getProduct } from "../redux/slice/productSlice";
-import heart from "../assets/heartcartIcon.png";
-import Filter from "../components/filter/Filter";
-import Adds from "../components/add/Adds";
-import basket from "../assets/svg/shoppingCart.svg";
-import Viewframe from "../assets/svg/eyeFrame.svg";
+import { getProduct } from "../../redux/slice/productSlice";
+import heart from "../../assets/heartcartIcon.png";
+import Filter from "../../components/filter/Filter";
+import Adds from "../../components/add/Adds";
+import basket from "../../assets/svg/shoppingCart.svg";
+import Viewframe from "../../assets/svg/eyeFrame.svg";
 import {
   fetchCategoryData,
   setSelectedCategory,
-} from "../redux/slice/categoryProduct";
-import { Product } from "../type/types";
+} from "../../redux/slice/categoryProduct";
+import { Product } from "../../type/types";
 
 const Category: React.FC = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);

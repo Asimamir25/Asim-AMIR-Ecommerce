@@ -1,12 +1,12 @@
 import React from "react";
-import Product from "./pages/ProductDetail";
-import Home from "./pages/Home";
+import Product from "./pages/productDetail/ProductDetail";
+import Home from "./pages/home/Home";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/navbar/Header";
 import Navbar from "./components/navbar/Navbar";
-import Category from "./pages/Category";
+import Category from "./pages/category/Category";
 import Footer from "./components/footer/Footer";
-import Cart from "./pages/CartDetail";
+import Cart from "./pages/cart/CartDetail";
 
 const App: React.FC = () => {
   return (

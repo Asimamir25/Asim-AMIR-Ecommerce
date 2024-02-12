@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axiosInstance from "../../api/api";
+import axiosInstance from "../../utils/api/api";
 import { Product } from "../../type/types";
 type CategoryProductState = {
   selectedCategory: string[];
